@@ -1,11 +1,11 @@
 language: java
 install: mvn install
-
 deploy:
    edge: true
    provider: cloudfoundry
    username: terentich@bk.ru
-   password: secure: "test"
+   password: 
+     secure: "test"
    api: https://api.run.pivotal.io
    organization: terentich-org
    space: development
