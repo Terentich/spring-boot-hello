@@ -1,6 +1,6 @@
 ---
 applications:
-  - name: spring-boot-hello
+  - name: terentich
     buildpack: java_buildpack
     path: target/spring-boot-hello-1.0.jar
-    memory: 128M
+    memory: 256M
