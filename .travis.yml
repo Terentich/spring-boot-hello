@@ -6,7 +6,7 @@ deploy:
    provider: cloudfoundry
    username: terentich@bk.ru
    password: 
-     secure: "test"
+     secure: "c5NUfbkaqQEDxHzRyl5myJBYDL03CIteh30AqIjLcX6bRxfOMAfJ8rDvq4j5StYssJI4UpMnQLH3kLrRPuhFjIMscW90USzLZ+FminJL1d93soDkNxWT45RXWjx2gbD+s/rXWA9AYRVK5gqzfgZ4g2AMhxDZmCGT2o7WZULV9kCocHWGixAToW5GasMCUyReTXrjJ54zRSguDYMqaMjbgrha1Z0JVYtCdrA///0drzapGFpns7vqOmDQo5kdZpHDq5J3DvLWOTzQ0+O0ZH1VSmhGbtiR77OrVDMuavJ98wwaBPXvwgeDb2FJT9jLUP87LzwWPou4eMd6RLrVyy1IfvX7P4aML7c+OORybY9kcUGDK8L0BYklenHsTgjkfWMP62DIL8GX2jE1xpCD00hCvl4aQKtdOpkwObRs2vP5qw1KFetV1YgwyKKvhX5O19sVYAcDjVSlmMevjC1MH5Rm5pYzvPwCTdU+0AJJqCcE0VmE93vqyGF7GXXPbXWKow60kPpKLCbq4BaCL+jeTXGuXfPOftrPxgNOyuXIdfJGKjzUUW2y1a3UNV2ipcz3MavrzotohXOFKJngAF/gKWXKe2LAMSqg60wh0l3w4eAxlmHmJ7KjzKNFLdLl9mM7qrmBQV3pS7XwcNmg/qtHgM0jclMoPfsxSfJIQteEdQv8Ajg="
    api: https://api.run.pivotal.io
    organization: terentich-org
    space: development
