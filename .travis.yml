@@ -2,6 +2,14 @@ language: java
 jdk: oraclejdk8
 install: mvn install
 deploy:
+  provider: releases
+  api_key:
+    secure: TiAzfCCsOzBZyzQxSzdSO0JFMJFwiTyPOSD+jzui0LOUHTkGrk2ScxuKPpK49YGdNXrPA4hYildfBjmAtvIk7CyGQ5WiN99YDA8H1R82B3fvd439D3+pNQoCgA3Oncppor6oDRgZeBQNZb6DfTHht28/dmDXMaPXhIwddl4Cy/rzK5kBI/Mx9cukzLUtTaDD3DceOl4uD9aZhetJnohMUyhTjb12zHW4JtocaCkJuCBoXeRBDpFXlm5GR4fEE7MpG/6AbW6cGVSg793LKcJC/lRCxoD2fd5R9cVlOKQUsn8g6fRhI00sH4WX8//RK41po1/5UAL8eE66UQh1VrOt7fhyFTylbt4FGzP906P9wptjvEIjKWFmxIqDgRrModAEG0z72AD/V17v0ZUmVNkz4OmkNGNy8D4gdJhID8JVKylHq9MtwpEjU6YQIfWK1x/Hbiq/euW4scjDmhT1Y+Nn/p8wsK2Z0WXAo/H0mGv5+DgM1743cGKlOJVq9VnRlebcv+L6SP7qk0AGNBYUCLeVB4nqe6RefEIP3sF/4QklJpqczFeKLPK6VTV0x9kKAQJBgsPDPHdODM+rJtzqEXgUrar/2Ok5zh3S5RCH2XccsTVIiy/3QCb5Q0ilHvy0SvgBKGxflXoth6c4MjGAng5VhpyiFXgCAAR7Qj0qW9SbwN0=
+  file_glob: true
+  file: "*.jar"
+  on:
+    repo: Terentich/spring-boot-hello
+deploy:
    edge: true
    provider: cloudfoundry
    username: terentich@bk.ru
