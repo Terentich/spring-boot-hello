@@ -11,4 +11,9 @@ public class ApiController {
     public String test() {
         return "Success";
     }
+
+//    @RequestMapping(value = "/{[path:[^\\.]*}")
+//    public String redirect() {
+//        return "forward:/";
+//    }
 }
