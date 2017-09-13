@@ -1,0 +1,22 @@
+import {Component} from '@angular/core';
+import {HttpClient} from '@angular/common/http';
+
+@Component({
+    selector: 'app-root',
+    templateUrl: './app.component.html',
+    styleUrls: ['./app.component.css']
+})
+export class AppComponent {
+    constructor(private http: HttpClient) {
+    }
+
+    title = 'app';
+
+    test() {
+        console.log("Hello world");
+        this.http.get('api').subscribe(data => {
+            console.log("result: " + data);
+        });
+
+    }
+}

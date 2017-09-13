@@ -7,6 +7,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 import {MdButtonModule, MdIconModule, MdMenuModule, MdToolbarModule} from '@angular/material';
 
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
     declarations: [
@@ -18,7 +19,8 @@ import {MdButtonModule, MdIconModule, MdMenuModule, MdToolbarModule} from '@angu
         MdButtonModule,
         MdMenuModule,
         MdToolbarModule,
-        MdIconModule
+        MdIconModule,
+        HttpClientModule
     ],
     providers: [],
     bootstrap: [AppComponent]

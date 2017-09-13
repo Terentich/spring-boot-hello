@@ -22,7 +22,6 @@ public class FacebookController {
     }
 
 
-
     @GetMapping
     public String helloFacebook(Model model) {
         if (connectionRepository.findPrimaryConnection(Facebook.class) == null) {
