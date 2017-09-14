@@ -13,9 +13,9 @@ export class AppComponent {
     title = 'app';
 
     test() {
-        console.log("Hello world");
-        this.http.get('api').subscribe(data => {
-            console.log("result: " + data);
+        console.log("Get actuator info: ");
+        this.http.get('/actuator/health').subscribe(data => {
+            console.log("result: " + JSON.stringify(data));
         });
 
     }
