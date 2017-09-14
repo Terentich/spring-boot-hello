@@ -13,8 +13,8 @@ export class AppComponent {
     title = 'app';
 
     test() {
-        console.log("Get actuator info: ");
-        this.http.get('/actuator/health').subscribe(data => {
+        console.log("Facebook status: ");
+        this.http.get('/connect/facebook').subscribe(data => {
             console.log("result: " + JSON.stringify(data));
         });
 

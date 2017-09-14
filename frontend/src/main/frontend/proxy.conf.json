@@ -4,10 +4,14 @@
     "secure": true
   },
   "/actuator": {
-    "target": "http://localhost::8080",
+    "target": "http://localhost:8080",
     "secure": true
   },
   "/admin": {
+    "target": "http://localhost:8080",
+    "secure": true
+  },
+  "/connect": {
     "target": "http://localhost:8080",
     "secure": true
   }
