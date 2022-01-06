@@ -44,13 +44,16 @@ public class AuthenticationTests {
                 .andExpect(status().isUnauthorized());
     }
 
+    // FIXME: Disable default root access test
+    /**
     @Test
     @WithMockUser
     public void authorizedRoot() throws Exception {
         mvc.perform(get("/"))
                 .andExpect(status().isOk());
     }
-
+    **/
+    
     @Test
     @WithMockUser
     public void authorizedApi() throws Exception {
