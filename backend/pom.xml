@@ -105,13 +105,15 @@
             <artifactId>spring-boot-starter-social-facebook</artifactId>
         </dependency>
 
+        <!--
         <dependency>
             <groupId>com.github.terenich</groupId>
             <artifactId>frontend</artifactId>
             <version>${project.version}</version>
             <scope>runtime</scope>
         </dependency>
-
+        -->
+             
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
