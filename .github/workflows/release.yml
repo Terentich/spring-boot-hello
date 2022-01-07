@@ -33,14 +33,14 @@ jobs:
       - name: Package with Maven
         run: mvn --batch-mode --update-snapshots package
 
-      #      - name: Create pre-release
-      #        uses: "marvinpinto/action-automatic-releases@latest"
-      #        with:
-      #          repo_token: "${{ secrets.GITHUB_TOKEN }}"
-      #          prerelease: true
-      #          title: "Development Build"
-      #          automatic_release_tag: "latest"
-      #          files: backend/target/*.jar
+      - name: Create pre-release
+        uses: "marvinpinto/action-automatic-releases@latest"
+        with:
+          repo_token: "${{ secrets.GITHUB_TOKEN }}"
+          prerelease: true
+          title: "Development Build"
+          automatic_release_tag: "latest"
+          files: backend/target/*.jar
 
       - name: Log in to the Container registry
         uses: docker/login-action@v1
