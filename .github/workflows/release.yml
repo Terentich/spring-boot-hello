@@ -4,14 +4,15 @@ on:
   pull_request:
     branches:
       - master
-    types: [closed]
+    types: [ closed ]
 
 env:
+  APPLICATION_PACKAGE: backend/target/*.jar
   REGISTRY: ghcr.io
   IMAGE_NAME: ${{ github.repository }}
 
 jobs:
-  pre-release:
+  package:
     if: github.event.pull_request.merged == true
     runs-on: ubuntu-latest
 
@@ -29,6 +30,18 @@ jobs:
       - name: Package with Maven
         run: mvn --batch-mode --update-snapshots package
 
+      - name: Cache package
+        uses: actions/cache@v2
+        with:
+          path: ${{ env.APPLICATION_PACKAGE }}
+          key: maven_package
+
+  pre-release:
+    needs: package
+
+    runs-on: ubuntu-latest
+
+    steps:
       - name: Create pre-release
         uses: "marvinpinto/action-automatic-releases@latest"
         with:
@@ -36,10 +49,11 @@ jobs:
           prerelease: true
           title: "Development Build"
           automatic_release_tag: "latest"
-          files: backend/target/*.jar
+          files: ${{ env.APPLICATION_PACKAGE }}
 
   build-and-push-image:
-    if: github.event.pull_request.merged == true
+    needs: package
+
     runs-on: ubuntu-latest
     permissions:
       contents: read
@@ -67,6 +81,6 @@ jobs:
         with:
           context: .
           push: true
-          tags: latest
-#          tags: ${{ steps.meta.outputs.tags }}
+          tags: user/app:latest
+          #          tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
