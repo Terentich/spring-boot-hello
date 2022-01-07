@@ -21,8 +21,11 @@ jobs:
           cache: maven
       - name: Package with Maven
         run: mvn --batch-mode --update-snapshots package
-      - name: Upload artifacts
-        uses: actions/upload-artifact@v2
+      - name: Create pre-release
+        uses: "marvinpinto/action-automatic-releases@latest"
         with:
-          name: Package
-          path: backend/target/*.jar
+          repo_token: "${{ secrets.GITHUB_TOKEN }}"
+          prerelease: true
+          title: "Development Build"
+          automatic_release_tag: "latest"
+          files: backend/target/*.jar
