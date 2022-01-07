@@ -7,13 +7,12 @@ on:
     types: [closed]
 
 env:
-  PULL_REQUEST_MERGED: ${{ github.event.pull_request.merged == true }}
   REGISTRY: ghcr.io
   IMAGE_NAME: ${{ github.repository }}
 
 jobs:
   pre-release:
-    if: ${{ env.PULL_REQUEST_MERGED }}
+    if: github.event.pull_request.merged == true
     runs-on: ubuntu-latest
 
     steps:
@@ -40,7 +39,7 @@ jobs:
           files: backend/target/*.jar
 
   build-and-push-image:
-    if: ${{ env.PULL_REQUEST_MERGED }}
+    if: github.event.pull_request.merged == true
     runs-on: ubuntu-latest
     permissions:
       contents: read
