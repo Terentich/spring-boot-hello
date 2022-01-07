@@ -1,9 +1,13 @@
 # spring-boot-hello
 
 ## Release
-Latest release [page](https://github.com/Terentich/spring-boot-hello/releases/latest)
+Latest release [page](./releases/latest)
+
+## Image
+Lastest docker image [page](./packages/latest)
+
 
 ## Build
 Latest status:
 
-[![CI](https://github.com/Terentich/spring-boot-hello/actions/workflows/ci.yml/badge.svg?branch=master)](https://github.com/Terentich/spring-boot-hello/actions/workflows/ci.yml)
+[![CI](./actions/workflows/ci.yml/badge.svg?branch=master)](./actions/workflows/ci.yml)
