@@ -39,7 +39,7 @@ jobs:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
           automatic_release_tag: latest
           prerelease: true
-          title: Development Build
+          title: "Development Build"
           files: backend/target/*.jar
 
       - name: Log in to the Container registry
